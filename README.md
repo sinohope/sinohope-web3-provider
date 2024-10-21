@@ -1,6 +1,4 @@
-<div align="center">
-  [<ins>Sinohope Web3 Provider Documentation</ins>](https://docs.sinohope.com/)
-</div>
+[Sinohope Web3 Provider Documentation](https://docs.sinohope.com/docs/category/mpc-waas-api)
 
 # Sinohope Web3 Provider
 
