@@ -52,7 +52,7 @@
   },
   "dependencies": {
     "@ethersproject/units": "^5.7.0",
-    "axios": "^1.6.2",
+    "axios": "^1.7.4",
     "debug": "^4.3.4",
     "ethers": "^5.7.2",
     "https-proxy-agent": "^7.0.2",
