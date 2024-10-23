@@ -1,6 +1,5 @@
 import * as util from "util";
-// @ts-ignore
-import { v4 as uuidv4 } from 'uuid';
+import { nanoid } from 'nanoid'
 // @ts-ignore
 import { GetVaults, ListWallets, ListAddresses, CreateTransfer, CreateTransaction, TransactionsByRequestIds, SignMessage, SignResult } from '@sinohope/js-sdk';
 import { getAssetByChain, promiseToFunction } from "./utils";
@@ -370,7 +369,7 @@ Available addresses: ${Object.values(this.accounts).join(', ')}.`
   }
 
   private getRequestId() : string {
-    return uuidv4();
+    return nanoid();
   }
   private async createPersonalSign(method: string, address: string, content: any, type: RawMessageType): Promise<string> {
     await this.initialized()

@@ -1,13 +1,18 @@
 {
   "name": "@sinohope/sinohope-web3-provider",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "EIP-1193 Compatible Ethereum provider for Sinohope",
   "repository": "github:sinohope/sinohope-web3-provider",
   "author": "Sinohope",
   "license": "MIT",
-  "main": "dist/src/index.js",
-  "types": "dist/src/index.d.ts",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "exports": {
+    "import": "./dist/index.esm.js",
+    "require": "./dist/index.cjs.js"
+  },
   "type": "module",
+  "types": "dist/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
@@ -23,7 +28,7 @@
     "lint": "tslint --config tslint.json --project tsconfig.json",
     "test": "mocha --exit --recursive 'test/**/*.test.ts'",
     "testread": "mocha --exit 'test/ethers/read.test.ts'",
-    "build": "tsc",
+    "build": "rollup -c",
     "watch": "tsc -w",
     "prepublishOnly": "npm run build"
   },
@@ -47,16 +52,22 @@
     "tslint-config-prettier": "1.18.0",
     "tslint-plugin-prettier": "2.3.0",
     "typechain": "^8.1.1",
-    "typescript": "^4.7.4",
+    "typescript": "^4.9.5",
     "web3": "^4.1.2"
   },
   "dependencies": {
+    "@ethersproject/hash": "^5.7.0",
     "@ethersproject/units": "^5.7.0",
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-typescript": "^12.1.1",
     "axios": "^1.7.4",
     "debug": "^4.3.4",
     "ethers": "^5.7.2",
     "https-proxy-agent": "^7.0.2",
-    "uuid": "^10.0.0",
+    "nanoid": "^5.0.7",
+    "rollup": "^4.24.0",
     "web3-providers-http": "1.8.0"
   }
 }
