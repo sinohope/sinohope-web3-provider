@@ -1,17 +1,11 @@
 {
   "name": "@sinohope/sinohope-web3-provider",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "EIP-1193 Compatible Ethereum provider for Sinohope",
   "repository": "github:sinohope/sinohope-web3-provider",
   "author": "Sinohope",
   "license": "MIT",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
-  "exports": {
-    "import": "./dist/index.esm.js",
-    "require": "./dist/index.cjs.js"
-  },
-  "type": "module",
+  "main": "dist/index.js", 
   "types": "dist/index.d.ts",
   "publishConfig": {
     "access": "public"

@@ -7,20 +7,11 @@ export default {
   input: 'src/index.ts',
   output: [
     {
-      file: 'dist/index.cjs.js',
-      format: 'cjs',
+      file: 'dist/index.js',
+      format: 'umd',
+      name:'sinohopeWeb3',
       sourcemap: true,
-    },
-    {
-      file: 'dist/index.esm.js',
-      format: 'esm',
-      sourcemap: true,
-    },
-    {
-      file: 'dist/index.mjs',
-      format: 'esm',
-      sourcemap: true,
-    },
+    }
   ],
   plugins: [
     resolve({
